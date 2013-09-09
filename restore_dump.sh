@@ -23,4 +23,4 @@ fi
   echo "SET UNIQUE_CHECKS=1;"
   echo "SET AUTOCOMMIT=1;"
   echo "COMMIT;"
-) | mysql -o -u root -p "$2"
+) | mysql -o -u root -p --max-allowed-packet=1073741824 "$2"
